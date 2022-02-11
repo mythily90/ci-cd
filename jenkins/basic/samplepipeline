@@ -1,0 +1,18 @@
+pipeline {
+	agent {
+		label "dev"
+	}
+	stages{
+		stage ("checkdockerversion"){
+			steps{
+				script{
+					sh "docker --version"
+					
+				}
+			}
+		
+		}
+	}
+
+
+}
